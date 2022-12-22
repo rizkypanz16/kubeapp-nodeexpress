@@ -7,7 +7,7 @@ build:
     stage: build
     script:
         - echo "Build node express app to docker image"
-        - docker login -u rizkypanz -p Rizkypanji16
+        - docker login -u <DOCKER_REGISTRY_USER> -p <DOCKER_REGISTRY_PASSWORD>
         - docker build -f Dockerfile -t rizkypanz/hellonodeexpress:stable .
         - docker push rizkypanz/hellonodeexpress:stable
     only:
